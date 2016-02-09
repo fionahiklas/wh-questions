@@ -19,7 +19,14 @@ Run the following command as a normal user (without admin rights) to install the
 gem install bundler --user-install
 ```
 
-This will install under $HOME/.gem
+This will install under $HOME/.gem and you'll need to add $HOME/.gem/ruby/2.0.0/bin to your PATH variable to pick up any installed executables, namely the bundle command.
+
+Next using bundler to install gems that are specified in Gemfile using the following command
+
+```
+bundle install --path .bundle
+```
+
 
 
 
