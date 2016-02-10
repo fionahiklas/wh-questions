@@ -19,7 +19,9 @@ module Common
     # Call the block for each line of the file
     #
     def each(&block)
-     File.open(@filename).each &block
+      File.open(@filename).each do |line|
+        yield(line.chomp)
+      end
     end
 
   end
