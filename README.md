@@ -51,19 +51,20 @@ Any Unit test code is handled here.  Yes, I know that RSpec pretty much covers e
 
 ### Common Targets
 
-The Rake build tool is used to execute tests.  The following targets are available
+The Rake build tool is used to execute tests.  Since we've used bundler it makes life easier to use the "bundle exec" to sort out the load paths.
+
+The following command runs the unit tests
 
 ```
-rake test
+bundle exec rake test
 ```
 
-Run the entire suite of unit tests.
+The following command runs the rspec tests for question one
 
 ```
-rake spec
+bundle exec rake spec_q1
 ```
 
-Run the RSpec tests
 
 
   
