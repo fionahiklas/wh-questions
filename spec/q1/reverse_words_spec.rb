@@ -27,4 +27,25 @@ RSpec.describe Q1::ReverseWords, '#reverse' do
     end
   end
 
+  context 'with example phrase' do
+    it 'returns the reverse sentence' do
+      result = @reverser.reverse('Welcome To William Hill')
+      expect(result).to eq 'Hill William To Welcome'
+    end
+  end
+
+  context 'with extra spaces' do
+    it 'returns the reverse sentence with single spacing' do
+      result = @reverser.reverse('Long ago in a  galaxy   far away    ...')
+      expect(result).to eq '... away far galaxy a in ago Long'
+    end
+  end
+
+  context 'with tab characters' do
+    it 'returns the reverse sentence with single spacing' do
+      result = @reverser.reverse("must\tyou\tforce the\tuse")
+      expect(result).to eq 'use the force you must'
+    end
+  end
+
 end
