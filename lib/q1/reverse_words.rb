@@ -4,7 +4,9 @@ module Q1
   class ReverseWords
 
     def reverse(input_line)
-      word_array = input_line.split(' ')
+      # split(' ') works with spaces and tabs, using regular expressions to
+      # be more definitive about *exactly* what the line is being split on
+      word_array = input_line.split(/[[:blank:]]+/)
       reversed_string = '';
 
       word_array.reverse_each do |word|
