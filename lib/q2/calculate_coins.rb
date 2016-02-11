@@ -2,6 +2,44 @@ module Q2
 
   ##
   #
+  # A result can be made up of several coins of the same type, for example
+  # 40p would, with minimal items be composed of 2 x 20.  This class holds the
+  # index for the coin denomination and the number of these.
+  #
+  class CoinAndMultiplier
+    attr_reader :coin_index, :multiplier
+
+    def initialize(coin_index=0, multiplier=0)
+      @coin_index = coin_index
+      @multiplier = multiplier
+    end
+  end
+
+  # A given coin can be composed of a combination, for example, the 20p
+  # pieces above could be replaced with 2 x 10p and each of those could be
+  # converted to 2 x 5p, and each of those by 2 x 2p + 1p, and 2p = 1p + 1p.
+  #
+  # These combinations are lists of CoinAndMultiplier, e.g
+  #   2p x 2
+  #   1p x 1
+  #
+  class Combination
+    def initialize
+      @combinations = []
+    end
+
+    def combinations
+      @combinations.size
+    end
+
+    def add(coin_and_multiplier)
+      @combinations.push(coin_and_multiplier)
+    end
+  end
+
+
+  ##
+  #
   # Calculate the combinations and permutations of coins
   # for a given monetary value.
   #

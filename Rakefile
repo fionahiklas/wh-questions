@@ -11,6 +11,12 @@ end
 
 RSpec::Core::RakeTask.new(:spec_q2) do |spec_task|
   spec_task.pattern = "spec/q2/*_spec.rb"
+  spec_task.rspec_opts = "--tag ~wip"
+end
+
+RSpec::Core::RakeTask.new(:spec_q2_wip) do |spec_task|
+  spec_task.pattern = "spec/q2/*_spec.rb"
+  spec_task.rspec_opts = "--tag wip"
 end
 
 Rake::TestTask.new(:test) do |test_task|

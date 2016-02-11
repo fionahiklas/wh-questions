@@ -7,14 +7,14 @@ RSpec.describe Q2::CalculateCoins, '#permutations' do
   end
 
   context 'with a value of 1p' do
-    it 'returns 1' do
+    it 'returns 1', :wip => true do
       result = @calculate.permutations(1)
       expect(result).to eq 1
     end
   end
 
   context 'with a value of 3p' do
-    it 'returns 1' do
+    it 'returns 1', :wip => true do
       result = @calculate.permutations(3)
       expect(result).to eq 2
     end

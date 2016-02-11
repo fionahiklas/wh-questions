@@ -7,7 +7,7 @@ RSpec.describe Q2::CalculateCoins, '#combinations' do
   end
 
   context 'with a value of 1p' do
-    it 'returns one combination of "1"' do
+    it 'returns one combination of "1"', :wip => true do
       result = @calculate.combinations(1)
       expect(result.class).to eq Array
       expect(result[0]).to eq '1'
@@ -15,7 +15,7 @@ RSpec.describe Q2::CalculateCoins, '#combinations' do
   end
 
   context 'with a value of 3p' do
-    it 'returns two combinations' do
+    it 'returns two combinations', :wip => true do
       result = @calculate.combinations(1)
       expect(result.class).to eq Array
       expect(result[0]).to eq '1'
