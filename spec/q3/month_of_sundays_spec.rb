@@ -8,7 +8,7 @@ RSpec.describe Q3::MonthOfSundays, '#number_of_months_with_five_sundays' do
 
   context 'with just one month with 5 sundays' do
     it 'returns 1', :wip => true do
-      result = @monthOfSundays.number_of_months_with_five_sundays()
+      result = @monthOfSundays.number_of_months_with_five_sundays(1,2016,1,2016)
       expect(result).to eq 1
     end
   end
